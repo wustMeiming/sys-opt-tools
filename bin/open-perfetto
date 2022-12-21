@@ -1,0 +1,7 @@
+#!/bin/bash
+MY_SELF=$(readlink -f "$0")
+BIN_PATH=$(dirname $MY_SELF)
+TOP_PATH=$(dirname $BIN_PATH)
+OPEN_PROFETTO=$TOP_PATH/perfetto/open-perfetto.py
+
+python $OPEN_PROFETTO $@ 
