@@ -448,7 +448,8 @@ def main():
     sys.exit(0)
 
   if args.list_ftrace:
-    adb('shell', 'cat /d/tracing/available_events | tr : /').wait()
+    # adb('shell', 'cat /d/tracing/available_events | tr : /').wait()
+    adb('shell', 'cat /sys/kernel/tracing/available_events | tr : /').wait()
     sys.exit(0)
 
   if args.config is not None and not os.path.exists(args.config):
