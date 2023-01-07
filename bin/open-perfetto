@@ -2,6 +2,7 @@
 MY_SELF=$(readlink -f "$0")
 BIN_PATH=$(dirname $MY_SELF)
 TOP_PATH=$(dirname $BIN_PATH)
+TRACE_FILE=$(readlink -f "$1")
 OPEN_PROFETTO=$TOP_PATH/perfetto/open-perfetto.py
 
-python $OPEN_PROFETTO $@ 
+python $OPEN_PROFETTO -t $TRACE_FILE 
