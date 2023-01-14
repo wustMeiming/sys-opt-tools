@@ -1,0 +1,13 @@
+# adb
+alias rep="adb reboot"
+alias ref="adb shell stop; adb shell start"
+alias sync_sys="adb root && adb remount && adb sync system && adb shell stop; adb shell start"
+
+# fastboot
+alias fb="fastboot"
+alias fbd="fastboot devices"
+alias fbr="fastboot reboot"
+alias fbw="fastboot -w"
+
+# tools
+alias td="tdir=`date +%Y-%m-%d-%H:%M:%S` && mkdir $tdir && cd $tdir"
